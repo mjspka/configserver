@@ -3,7 +3,7 @@ server:
 
 spring:
   profiles:
-    active: native, jdbc
+    active: git
   application:
     name: configserver
   cloud:
@@ -12,7 +12,8 @@ spring:
         native:
           searchLocations: file://${user.home}/config-repo
         git:
-          uri: https://github.com/mjspka/configserver.git/config-repo
+          uri: https://github.com/mjspka/configserver
+          search-paths: config-repo
         vault:
           port: 8200
           host: 127.0.01

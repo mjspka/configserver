@@ -281,3 +281,11 @@ spring:
     password: guest
 ```
 > The advantage of client bus is to propagate the event to refresh the configuration to all the instances of config client micro-service. All we need to do is call the /actuator/refresh event on one of the micro-service event.
+
+# How to send refresh event to config client?
+
+> Invoke the endpoint @POST /actuator/refresh for config client. This is to allow all the configuration with @RefreshScope annotation and @ConfigurationProperties annotation refreshed with the configuration stored at config server.
+
+```
+curl -X POST http://localhost:8080/actuator/refresh
+```
