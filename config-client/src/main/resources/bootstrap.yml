@@ -3,8 +3,9 @@ spring:
     name: configclient
   cloud:
     config:
-      profile: dev
-      label: latest
+# Uncomment the profile and label for jdbc as back-end for config-server    
+#      profile: dev
+#      label: latest
 #      token: myroot
       uri: http://localhost:8888 
   rabbitmq:

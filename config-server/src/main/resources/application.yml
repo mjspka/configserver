@@ -13,7 +13,7 @@ spring:
           searchLocations: file://${user.home}/config-repo
         git:
           uri: https://github.com/mjspka/configserver
-          search-paths: config-repo
+          searchPaths: config-repo
         vault:
           port: 8200
           host: 127.0.01
