@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: configclient
+  cloud:
+    config:
+      profile: dev
+      label: latest
+#      token: myroot
+      uri: http://localhost:8888 
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: guest
+    password: guest
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: info, health, env, refresh
+#        include: "*"

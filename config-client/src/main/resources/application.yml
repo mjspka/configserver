@@ -1,0 +1,3 @@
+config:
+  client:
+    property: This is loaded from classpath
