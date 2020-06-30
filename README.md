@@ -204,6 +204,8 @@ spring:
 
 > Add the following configuration in application.yml file of config-server
 
+> The database should have a table called PROPERTIES table.
+
 ```
 spring:
   profiles:
