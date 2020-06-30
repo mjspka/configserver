@@ -167,6 +167,9 @@ spring:
 ```
 * The profiles
 ** native refers to File based system
+
+> Add the following configuration in application.yml file of config-server
+
 ```
 spring:
   profiles:
@@ -180,6 +183,9 @@ spring:
           searchLocations: file://${user.home}/config-repo
 ```
 ** git refers to GIT based system
+
+> Add the following configuration in application.yml file of config-server
+
 ```
 spring:
   profiles:
@@ -190,9 +196,14 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/mjspka/configserver.git/config-repo
+        uri: https://github.com/mjspka/configserver
+        searchPaths: config-repo
 ```
+
 ** db refers to jdbc based system
+
+> Add the following configuration in application.yml file of config-server
+
 ```
 spring:
   profiles:
