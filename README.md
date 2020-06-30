@@ -230,6 +230,19 @@ spring:
 </dependency>
 ```
 
+> Uncomment profile and label in the bootstrap.yml file of config-client
+
+```
+spring:
+  application:
+    name: configclient
+  cloud:
+    config:
+# Uncomment the profile and label for jdbc as back-end for config-server    
+#      profile: dev
+#      label: latest
+```
+
 # How to enable client bus?
 * In config server micro-service
 
