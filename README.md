@@ -1,5 +1,25 @@
 ****** Embedded RabbitMQ requires erlang to be installed. If you do not want Embedded Rabbit MQ then comment out RabbitMQ code to start then server ****
 
+# How to disable Embedded RabbitMQ
+> Comment out the following line in the class, ConfigServerApplication for  config-server Micro-service
+```
+//		EmbeddedRabbitMqConfig.Builder configBuilder = new EmbeddedRabbitMqConfig.Builder();
+//        //configBuilder.port(rabbitmqPort);
+//		//configBuilder.randomPort();
+//        EmbeddedRabbitMqConfig config = configBuilder.build();
+//		
+//		EmbeddedRabbitMq rabbitMq = new EmbeddedRabbitMq(config);
+//		rabbitMq.start();
+```
+> Please make sure that you are running RabbitMQ locally on port 5672 because config client needs it. If you want to disable the client bus then comment out the following lines in bootstrap.yml for config-client Micro-service
+```
+#  rabbitmq:
+#    host: 127.0.0.1
+#    port: 5672
+#    username: admin
+#    password: admin
+```
+
 # Spring boot config server example
 This repository covers the examples of spring-boot config server and config client
 
