@@ -1,3 +1,5 @@
+****** Embedded RabbitMQ requires erlang to be installed. If you do not want Embedded Rabbit MQ then comment out RabbitMQ code to start then server ****
+
 # Spring boot config server example
 This repository covers the examples of spring-boot config server and config client
 
